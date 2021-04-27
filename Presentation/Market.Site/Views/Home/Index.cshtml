@@ -1,0 +1,25 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h1>Home - Index</h1>
+        <div>
+            <p>
+                Hola @User.Identity.Name <br />Usuario residente de: @ViewBag.Country
+            </p>
+            <p>
+                <a href="@Url.Action("LogOut", "Auth")">Log Out</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
