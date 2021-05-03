@@ -7,13 +7,15 @@ using System.Web.Mvc;
 
 namespace Market.Site.Controllers
 {
+    [AllowAnonymous]
     public class HomeController : Controller
     {
         // GET: Home
         public ActionResult Index()
         {
-            var claimsIdentity = User.Identity as ClaimsIdentity;
-            ViewBag.Country = claimsIdentity.FindFirst(ClaimTypes.Country).Value;
+            //var claimsIdentity = User.Identity as ClaimsIdentity;
+            //ViewBag.Country = claimsIdentity.FindFirst(ClaimTypes.Country).Value;
+
             return View();
         }
     }
