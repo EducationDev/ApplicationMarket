@@ -17,6 +17,7 @@
                 Hola @User.Identity.Name <br />Usuario residente de: @ViewBag.Country
             </p>
             <p>
+                <a href="@Url.Action("Index", "Category")">Categorias</a> <br/>
                 <a href="@Url.Action("LogOut", "Auth")">Log Out</a>
             </p>
         </div>

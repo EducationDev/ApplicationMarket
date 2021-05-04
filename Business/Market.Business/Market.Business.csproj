@@ -41,7 +41,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoryBiz.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Data\Market.Data\Market.Data.csproj">
+      <Project>{66c63896-89f5-4d7c-8fb0-456c814c86c0}</Project>
+      <Name>Market.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Market.Entities\Market.Entities.csproj">
+      <Project>{9269B7E1-C4E8-44C2-A114-03460A12F0EB}</Project>
+      <Name>Market.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Market.Framework\Market.Framework.csproj">
+      <Project>{a4e829f8-2ac1-4eff-b890-59d9a32a76ba}</Project>
+      <Name>Market.Framework</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

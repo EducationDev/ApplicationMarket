@@ -131,6 +131,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -144,6 +145,8 @@
     <None Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Auth\LogIn.cshtml" />
+    <Content Include="Views\Category\Index.cshtml" />
+    <Content Include="Views\Category\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -154,6 +157,20 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Business\Market.Business\Market.Business.csproj">
+      <Project>{494d5ce9-d3c5-40b7-9e6d-16f562c4b13b}</Project>
+      <Name>Market.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Market.Entities\Market.Entities.csproj">
+      <Project>{9269b7e1-c4e8-44c2-a114-03460a12f0eb}</Project>
+      <Name>Market.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Market.Framework\Market.Framework.csproj">
+      <Project>{a4e829f8-2ac1-4eff-b890-59d9a32a76ba}</Project>
+      <Name>Market.Framework</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
