@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/site.css" rel="stylesheet" /> 
+</head>
+<body>
+    <div id="contenedor">
+        <div id="cabecera">
+            <div id="logo">
+                <h1></h1>
+            </div>
+            <div id="buscador">
+                <form action="#" method="post">
+                    Buscar &nbsp;
+                    <input name="busqueda" type="text" />
+                </form>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <div id="menu">
+            <ul id="menu_principal">
+                <li> <a href="/">Home</a> </li>
+                <li>
+                    <a href="@Url.Action("Index", "Category")">Categorias</a>
+                </li>
+                <li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <a href="@Url.Action("LogOut", "Auth")">Log Out</a>
+                    }
+                </li>
+            </ul>
+        </div>
+        <div id="contenido">
+            <div id="principal">
+                @RenderBody()
+            </div>
+            <div id="secundario">
+                <h2> Opciones secundarias</h2>
+            </div>
+        </div>
+        <div id="pie">
+            <p> Datos de la WebSite - 2021</p>
+        </div>
+        
+    </div>
+
+</body>
+</html>

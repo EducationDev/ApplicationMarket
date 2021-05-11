@@ -1,26 +1,14 @@
-﻿@{
-    Layout = null;
+﻿
+@{
+    ViewBag.Title = "Index Home";
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div>
-        <h1>Home - Index</h1>
-        <div>
-            <p>
-                Hola @User.Identity.Name <br />Usuario residente de: @ViewBag.Country
-            </p>
-            <p>
-                <a href="@Url.Action("Index", "Category")">Categorias</a> <br/>
-                <a href="@Url.Action("LogOut", "Auth")">Log Out</a>
-            </p>
-        </div>
-    </div>
-</body>
-</html>
+<h2>@ViewBag.Title</h2>
+
+<p>
+    Hola @User.Identity.Name
+</p>
+<p >
+    Usuario residente de: @ViewBag.Country
+</p>
