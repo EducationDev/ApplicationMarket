@@ -30,5 +30,17 @@ namespace Market.Business
             var lista = db.Get();
             return lista;
         }
+
+        public Category Get(int id)
+        {
+            var db = new BaseDataService<Category>();
+            return db.GetById(id);
+        }
+
+        public void Eliminar(Category model)
+        {
+            var db = new BaseDataService<Category>();
+            db.Delete(model);
+        }
     }
 }

@@ -42,8 +42,20 @@ namespace Market.Site.Controllers
                 return View(model);
             }
         }
-
-        
+        [HttpGet]
+        public ActionResult Delete(int id)
+        {
+            var biz = new CategoryBiz();
+            var model = biz.Get(id);
+            return View(model);
+        }
+        [HttpPost]
+        public ActionResult Delete(Category model)
+        {
+            var biz = new CategoryBiz();
+            biz.Eliminar(model);
+            return RedirectToAction("Index");
+        }
 
     }
 }
