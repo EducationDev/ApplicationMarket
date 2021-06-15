@@ -1,0 +1,140 @@
+#Using Object Literals to Create JavaScript Objects
+let person = {
+	firstName: "Jim",
+	lastName: "Fox"
+};
+display(person.firstName);
+
+#The Dynamic Nature of JavaScript
+person.age = 29;
+
+#Adding Functions to Objects
+
+let person = {
+	firstName: 'Jim',
+	lastName: 'Fox',
+	age: 29,
+	isAdult: function() { return this.age > 18; }
+};
+display(person.isAdult());
+#Object Literal Property Shorthand
+
+function registerUser(fName, lName) {
+	let person = {
+		firstName: fName,
+		lastName: lName,
+	};
+	display(person);
+}
+registerUser('Jim', 'Fox');
+
+#Object Literal Method Declaration Shorthand
+
+let person = {
+	firstName: "Jim",
+	lastName: "Fox",
+	age: 9,
+	isAdult() { return this.age > 21; }
+};
+display(person.isAdult());
+
+#Inspecting Object Properties with Object.keys() and for...in
+
+let person = {
+	firstName: "Jim",
+	lastName: "Fox",
+	age: 29,
+	isAdult() { return this.age > 21; }
+};
+display(Object.keys(person));
+for (let propertyName in person) {
+	display(propertyName);
+}
+
+#Object Equality and the Object.is() Function
+PPT
+
+#Object Assign and Immutability
+
+Assign
+let person1 = {
+	firstName: 'Jim',
+	lastName: 'Fox',
+	age: 29,
+	isAdult: function () { return this.age > 18; }
+};
+
+let person2 = {};
+Object.assign(person2, person1);
+display(person2);
+display(person1 === person2);
+
+Immutability
+let person1 = {
+	firstName: 'Jim',
+	lastName: 'Fox',
+	age: 29,
+	isAdult: function () { return this.age > 18; }
+};
+
+let healthStats = {
+	height: 173,
+	weight: 76
+}
+
+function merge(person, healthStats) {
+	return Object.assign({}, person, healthStats);
+}
+
+let mergedPerson = merge(person1, healthStats);
+display(mergedPerson);
+display(person1);
+
+#Using Constructor Functions to Create Objects
+
+let jim = {
+		firstName: 'Jim',
+		lastName: 'Fox',
+		age: 29,
+		isAdult: function () { return this.age > 18; }
+	};
+	display(jim.isAdult());
+
+	let sofia = {
+		firstName: 'Sofia',
+		lastName: 'Fox',
+		age: 9,
+		isAdult: function () { return this.age > 18; }
+	};
+	display(sofia.isAdult());
+function Person(firstName, lastName,age) {
+	this.firstName = firstName;
+	this.lastName = lastName;
+	this.age = age;
+	this.isAdult = function() { return this.age > 21; }
+}
+
+let jim = new Person('Jim', 'Cooper', 29);
+let sofia = new Person('Sofia', 'Cooper', 17);
+
+display(jim.isAdult());
+display(sofia.isAdult());
+
+#Using Object.create()
+
+let person1 = {
+	firstName: 'Jim',
+	lastName: 'Fox',
+	age: 29,
+};
+display(person1);
+
+let person2 = Object.create(
+	Object.prototype,
+	{
+		firstName: { value: "Jim", enumerable: true, configurable: true, writable: true },
+		lastName: { value: "Fox", enumerable: true, configurable: true, writable: true },
+		age: { value: 29, enumerable: true, configurable: true, writable: true }
+	}
+);
+display(person2);

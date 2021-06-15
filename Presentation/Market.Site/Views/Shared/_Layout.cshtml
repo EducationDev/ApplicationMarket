@@ -4,7 +4,8 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    <link href="~/Content/site.css" rel="stylesheet" /> 
+    <link href="~/Content/site.css" rel="stylesheet" />
+    <script src="~/Scripts/utils.js"></script>
 </head>
 <body>
     <div id="contenedor">
@@ -39,15 +40,16 @@
             <div id="principal">
                 @RenderBody()
             </div>
-            <div id="secundario">
+            @*<div id="secundario">
                 <h2> Opciones secundarias</h2>
-            </div>
+            </div>*@
         </div>
         <div id="pie">
             <p> Datos de la WebSite - 2021</p>
         </div>
-        
-    </div>
 
+    </div>
+    
+    
 </body>
 </html>

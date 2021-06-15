@@ -122,9 +122,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\javascript-objects-prototypes-and-classes-parte-1.txt" />
     <Content Include="Content\logo.jpg" />
     <Content Include="Content\site.css" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\demo.js" />
+    <Content Include="Scripts\utils.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -160,7 +163,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>
